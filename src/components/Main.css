@@ -6,6 +6,7 @@
 .appMainNoteEdit,
 .appMainNotePreview {
   height: 50vh;
+  box-sizing: border-box;
 }
 
 .appMainNoteEdit {
@@ -18,7 +19,7 @@ textarea {
   margin-bottom: 20px;
   padding: 5px;
   width: 100%;
-  height: calc(50vh - 90px);
+  height: calc(50vh - 145px);
   resize: none;
 }
 
