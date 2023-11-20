@@ -1,0 +1,43 @@
+.appMain {
+  width: 70%;
+  height: 100vh;
+}
+
+.appMainNoteEdit,
+.appMainNotePreview {
+  height: 50vh;
+}
+
+.appMainNoteEdit {
+  padding: 25px;
+}
+
+.appMainNoteEdit input,
+textarea {
+  display: block;
+  margin-bottom: 20px;
+  padding: 5px;
+  width: 100%;
+  height: calc(50vh - 90px);
+  resize: none;
+}
+
+.appMainNoteEdit input {
+  font-size: 2rem;
+  height: 50px;
+}
+
+.appMainNotePreview {
+  border-top: 1px solid #ddd;
+  overflow-y: scroll;
+  padding: 25px;
+}
+
+.previewTitle {
+  margin: 0;
+}
+
+.markdownPreview {
+  margin-top: 20px;
+  line-height: 2rem;
+}
