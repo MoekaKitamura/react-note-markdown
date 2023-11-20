@@ -1,14 +1,28 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Main from "./components/Main";
 import Sidebar from "./components/Sidebar";
 import { v4 as uuidv4 } from "uuid";
 
 function App() {
-  const [notes, setNotes] = useState([]);
+  const [notes, setNotes] = useState(
+    // JSONからjsに戻して使用
+    JSON.parse(localStorage.getItem("notes")) || []
+  );
   const [activeNoteId, setActiveNoteId] = useState();
 
+  useEffect(() => {
+    // 1番目のノートがactiveになるように
+    setActiveNoteId(notes[0].id);
+  }, []);
+
+  useEffect(() => {
+    // localStorageへ保存(JSON形式にする)
+    localStorage.setItem("notes", JSON.stringify(notes));
+  }, [notes]);
+
   const onAddNote = () => {
+    // 追加を押した時に作られるノート
     const newNote = {
       id: uuidv4(),
       title: "新しいノート",
