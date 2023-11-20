@@ -15,12 +15,20 @@ function App() {
       modDate: Date.now(),
     };
     setNotes([...notes, newNote]);
-    console.log(notes);
+  };
+
+  const onDeleteNote = (id) => {
+    const newNotes = notes.filter((note) => note.id !== id);
+    setNotes(newNotes);
   };
 
   return (
     <div className="App">
-      <Sidebar onAddNote={onAddNote} notes={notes} />
+      <Sidebar
+        onAddNote={onAddNote}
+        onDeleteNote={onDeleteNote}
+        notes={notes}
+      />
       <Main />
     </div>
   );
