@@ -1,0 +1,45 @@
+.appSidebar {
+  width: 30%;
+  height: 100vh;
+  border-right: 1px solid #ddd;
+}
+
+.appSidebarHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  align-items: center;
+}
+
+.appSidebarHeader h1 {
+  margin: 0;
+}
+
+.appSidebarNotes {
+  height: calc(100vh - 98px);
+  overflow-y: scroll;
+}
+
+.appSidebarNote {
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.appSidebarNote:hover {
+  background: #343434;
+}
+
+.appSidebarNoteTitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appSidebarNote p {
+  margin: 10px 0;
+}
+
+.appSidebarNote small {
+  color: #999;
+}
