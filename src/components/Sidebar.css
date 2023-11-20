@@ -40,8 +40,17 @@
   align-items: center;
 }
 
+.appSidebarNoteTitle strong {
+  width: 370px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .appSidebarNote p {
   margin: 10px 0;
+  max-height: 75px;
+  overflow: hidden;
 }
 
 .appSidebarNote small {
